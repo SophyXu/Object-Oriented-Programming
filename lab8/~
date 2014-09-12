@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class A
+{
+	int m_value;
+	static int max_value;  //加上static  1分
+public:
+	A(int i) : m_value(i)
+	{
+		max_value = m_value > max_value ? m_value : max_value;
+	}
+
+	static void printMax();  //去掉const  0.5分
+};
+
+//int A::max_value;  //增加此行   1分
+
+void A::printMax() //去掉const  0.5分
+{
+	cout << max_value << endl;
+}
+int main()
+{
+	return 0;
+}
